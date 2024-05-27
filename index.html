@@ -1,0 +1,2853 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://pixner.net/cortaly/main/index.html -->
+<html lang="en"
+    class=" sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Cortaly - URL Shortner HTML Template</title>
+
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/all.min.css">
+    <link rel="stylesheet" href="./assets/animate.css">
+    <link rel="stylesheet" href="./assets/nice-select.css">
+    <link rel="stylesheet" href="./assets/owl.min.css">
+    <link rel="stylesheet" href="./assets/magnific-popup.css">
+    <link rel="stylesheet" href="./assets/flaticon.css">
+    <link rel="stylesheet" href="./assets/main.css">
+
+    <link rel="shortcut icon" href="https://pixner.net/cortaly/main/assets/images/favicon.png" type="image/x-icon">
+    <style>
+        @font-face {
+            font-family: 'Open Sans Regular';
+            font-style: normal;
+            font-weight: 400;
+            src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/open-sans-v18-latin-regular.woff');
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: 'Open Sans Bold';
+            font-style: normal;
+            font-weight: 800;
+            src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/OpenSans-Bold.woff');
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: 'Open Sans ExtraBold';
+            font-style: normal;
+            font-weight: 800;
+            src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/open-sans-v18-latin-800.woff');
+        }
+    </style>
+    <style type="text/css">
+        button.btn[data-v-f3fb3dc8] {
+            display: inline-block;
+            font-weight: 300;
+            line-height: 1.25;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border: 1px solid transparent;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: all 0.15s ease
+        }
+
+        button.btn.btn-sm[data-v-f3fb3dc8] {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+            border-radius: 0.2rem
+        }
+
+        button.btn.btn-primary[data-v-f3fb3dc8] {
+            color: #fff;
+            background-color: #45c8f1;
+            border-color: #45c8f1
+        }
+
+        button.btn.btn-outline-primary[data-v-f3fb3dc8] {
+            color: #45c8f1;
+            background-color: transparent;
+            border-color: #45c8f1
+        }
+
+        button.btn.btn-danger[data-v-f3fb3dc8] {
+            color: #fff;
+            background-color: #ff4949;
+            border-color: #ff4949
+        }
+
+        .text-muted[data-v-f3fb3dc8] {
+            color: #8492a6
+        }
+
+        .text-center[data-v-f3fb3dc8] {
+            text-align: center
+        }
+
+        .drop-down-enter[data-v-f3fb3dc8],
+        .drop-down-leave-to[data-v-f3fb3dc8] {
+            transform: translateX(0) translateY(-20px);
+            transition-timing-function: cubic-bezier(0.74, 0.04, 0.26, 1.05);
+            opacity: 0
+        }
+
+        .drop-down-enter-active[data-v-f3fb3dc8],
+        .drop-down-leave-active[data-v-f3fb3dc8] {
+            transition: all 0.15s
+        }
+
+        .move-left-enter[data-v-f3fb3dc8],
+        .move-left-leave-to[data-v-f3fb3dc8] {
+            transform: translateY(0) translateX(-80px);
+            transition-timing-function: cubic-bezier(0.74, 0.04, 0.26, 1.05);
+            opacity: 0
+        }
+
+        .move-left-enter-active[data-v-f3fb3dc8],
+        .move-left-leave-active[data-v-f3fb3dc8] {
+            transition: all 0.15s
+        }
+
+        .no-tr[data-v-f3fb3dc8] {
+            transition: none !important
+        }
+
+        .no-tr *[data-v-f3fb3dc8] {
+            transition: none !important
+        }
+
+        .overlay[data-v-f3fb3dc8] {
+            position: fixed;
+            background: rgba(220, 220, 220, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: all 0.2s ease;
+            opacity: 0;
+            visibility: hidden
+        }
+
+        .overlay .modal[data-v-f3fb3dc8] {
+            transition: all 0.2s ease;
+            opacity: 0;
+            transform: scale(0.6);
+            overflow: hidden
+        }
+
+        .overlay.show[data-v-f3fb3dc8] {
+            opacity: 1;
+            visibility: visible
+        }
+
+        .overlay.show .modal[data-v-f3fb3dc8] {
+            opacity: 1;
+            transform: scale(1)
+        }
+
+        .panel[data-v-f3fb3dc8] {
+            padding: 6px 10px;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            align-items: center;
+            border-radius: 6px;
+            position: relative;
+            border: 1px solid #eaf7ff;
+            background: #f7fcff;
+            outline: none;
+            transition: all 0.07s ease-in-out
+        }
+
+        .btn[data-v-f3fb3dc8] {
+            cursor: pointer;
+            box-sizing: border-box
+        }
+
+        .light-btn[data-v-f3fb3dc8] {
+            padding: 10px 12px;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            align-items: center;
+            border-radius: 6px;
+            position: relative;
+            border: 1px solid #eaf7ff;
+            background: #f7fcff;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.07s ease-in-out
+        }
+
+        .light-btn[data-v-f3fb3dc8]:hover {
+            background: #e0f4ff;
+            border-color: #8acfff
+        }
+
+        .primary-btn[data-v-f3fb3dc8] {
+            background: #239bf5;
+            color: white;
+            border-radius: 6px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s ease;
+            font-size: 14px;
+            font-family: "Didact Gothic Regular", sans-serif
+        }
+
+        .primary-btn[data-v-f3fb3dc8]:hover {
+            background: #40a8f6;
+            color: white;
+            text-decoration: none
+        }
+
+        .shake[data-v-f3fb3dc8] {
+            animation: shake-f3fb3dc8 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+            transform: translate3d(0, 0, 0)
+        }
+
+        @keyframes shake-f3fb3dc8 {
+
+            10%,
+            90% {
+                transform: translate3d(-1px, 0, 0)
+            }
+
+            20%,
+            80% {
+                transform: translate3d(2px, 0, 0)
+            }
+
+            30%,
+            50%,
+            70% {
+                transform: translate3d(-4px, 0, 0)
+            }
+
+            40%,
+            60% {
+                transform: translate3d(4px, 0, 0)
+            }
+        }
+
+        .pulse[data-v-f3fb3dc8] {
+            animation: pulse-f3fb3dc8 2s ease infinite
+        }
+
+        @keyframes pulse-f3fb3dc8 {
+            0% {
+                opacity: 0.7
+            }
+
+            50% {
+                opacity: 0.4
+            }
+
+            100% {
+                opacity: 0.7
+            }
+        }
+
+        .flash-once[data-v-f3fb3dc8] {
+            animation: flash-once 3.5s ease 1
+        }
+
+        @keyframes fade-up-f3fb3dc8 {
+            0% {
+                transform: translate3d(0, 10px, 0);
+                opacity: 0
+            }
+
+            100% {
+                transform: translate3d(0, 0, 0);
+                opacity: 1
+            }
+        }
+
+        .fade-in[data-v-f3fb3dc8] {
+            animation: fade-in-f3fb3dc8 0.3s ease-in-out
+        }
+
+        @keyframes fade-in-f3fb3dc8 {
+            0% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        .spin[data-v-f3fb3dc8] {
+            animation-name: spin-f3fb3dc8;
+            animation-duration: 2000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear
+        }
+
+        @keyframes spin-f3fb3dc8 {
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .bounceIn[data-v-f3fb3dc8] {
+            animation-name: bounceIn-f3fb3dc8;
+            transform-origin: center bottom;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-iteration-count: 1
+        }
+
+        @keyframes bounceIn-f3fb3dc8 {
+
+            0%,
+            20%,
+            40%,
+            60%,
+            80%,
+            100% {
+                -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+            }
+
+            0% {
+                opacity: 1;
+                -webkit-transform: scale3d(0.8, 0.8, 0.8);
+                transform: scale3d(0.8, 0.8, 0.8)
+            }
+
+            20% {
+                -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                transform: scale3d(1.1, 1.1, 1.1)
+            }
+
+            40% {
+                -webkit-transform: scale3d(0.9, 0.9, 0.9);
+                transform: scale3d(0.9, 0.9, 0.9)
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(1.03, 1.03, 1.03);
+                transform: scale3d(1.03, 1.03, 1.03)
+            }
+
+            80% {
+                -webkit-transform: scale3d(0.97, 0.97, 0.97);
+                transform: scale3d(0.97, 0.97, 0.97)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1)
+            }
+        }
+
+        @keyframes dots-f3fb3dc8 {
+
+            0%,
+            20% {
+                color: rgba(0, 0, 0, 0);
+                text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0)
+            }
+
+            40% {
+                color: #8492a6;
+                text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0)
+            }
+
+            60% {
+                text-shadow: 0.25em 0 0 #8492a6, 0.5em 0 0 rgba(0, 0, 0, 0)
+            }
+
+            80%,
+            100% {
+                text-shadow: 0.25em 0 0 #8492a6, 0.5em 0 0 #8492a6
+            }
+        }
+
+        @keyframes recording-f3fb3dc8 {
+            0% {
+                box-shadow: 0px 0px 5px 0px rgba(173, 0, 0, 0.3)
+            }
+
+            65% {
+                box-shadow: 0px 0px 5px 5px rgba(173, 0, 0, 0.3)
+            }
+
+            90% {
+                box-shadow: 0px 0px 5px 5px rgba(173, 0, 0, 0)
+            }
+        }
+
+
+        body[data-v-f3fb3dc8] {
+            margin: 0;
+            font-size: 100%;
+            color: #3c4858
+        }
+
+        a[data-v-f3fb3dc8] {
+            text-decoration: none;
+            color: #45c8f1
+        }
+
+        h1[data-v-f3fb3dc8],
+        h2[data-v-f3fb3dc8],
+        h3[data-v-f3fb3dc8],
+        h4[data-v-f3fb3dc8] {
+            margin-top: 0
+        }
+
+        svg[data-v-f3fb3dc8] {
+            outline: none
+        }
+
+        .container_selected_area[data-v-f3fb3dc8] {
+            display: none;
+            visibility: hidden;
+            padding: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2147483647
+        }
+
+        .container_selected_area.active[data-v-f3fb3dc8] {
+            visibility: visible;
+            display: block
+        }
+
+        .container_selected_area .label[data-v-f3fb3dc8] {
+            font-family: "Didact Gothic Regular", sans-serif;
+            font-size: 22px;
+            text-align: center;
+            padding-top: 15px
+        }
+
+        .area[data-v-f3fb3dc8] {
+            display: none;
+            position: absolute;
+            z-index: 2147483647;
+            pointer-events: none;
+            border: 1px solid #1e83ff;
+            background: rgba(30, 131, 255, 0.1);
+            box-sizing: border-box
+        }
+
+        .area.active[data-v-f3fb3dc8] {
+            display: block;
+            top: 0;
+            left: 0
+        }
+
+        .hide[data-v-f3fb3dc8] {
+            display: none
+        }
+    </style>
+</head>
+
+<body cz-shortcut-listen="true">
+    <!--============= ScrollToTop Section Starts Here =============-->
+    <div class="overlayer" id="overlayer" style="display: none;">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+    <a href="https://pixner.net/cortaly/main/index.html#0" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
+    <div class="overlay"></div>
+    <!--============= ScrollToTop Section Ends Here =============-->
+
+
+    <!--============= Header Section Starts Here =============-->
+    <header class="header-section">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="https://pixner.net/cortaly/main/index.html">
+                        <img src="./assets/logo.png" alt="logo">
+                    </a>
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a href="https://pixner.net/cortaly/main/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="https://pixner.net/cortaly/main/payout-rates.html">Payout Rates</a>
+                    </li>
+                    <li>
+                        <a href="https://pixner.net/cortaly/main/faq.html">Faq</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="https://pixner.net/cortaly/main/index.html#0">Blog</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="https://pixner.net/cortaly/main/blog.html">Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://pixner.net/cortaly/main/blog-single.html">Blog Single</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="d-sm-none text-center">
+                        <a href="https://dash.user.refearn.website/login" class="header-button active">Login</a>
+                    </li>
+                    <li class="d-sm-none text-center">
+                        <a href="https://dash.user.refearn.website/register" class="mb-4 header-button">Register</a>
+                    </li>
+                </ul>
+                <div class="header-bar d-lg-none mr-sm-3">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="header-right">
+                    <a href="https://dash.user.refearn.website/login"
+                        class="header-button d-none d-sm-inline-block m-0 active">Login</a>
+                    <a href="https://dash.user.refearn.website/register"
+                        class="header-button d-none d-sm-inline-block m-0">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--============= Header Section Ends Here =============-->
+
+
+    <!--============= Banner Section Starts Here =============-->
+    <section class="banner-section">
+        <div class="banner-bg bg_img" data-background="./banner-bg.jpg"
+            style="background-image: url(./banner-bg.jpg);">
+            <div class="banner-bg-shape"><img src="./assets/banner-shape.png"
+                    alt="banner"></div>
+            <div class="round-1">
+                <img src="./assets/01.png" alt="banner">
+            </div>
+            <div class="round-2">
+                <img src="./assets/02.png" alt="banner">
+            </div>
+        </div>
+        <div class="container">
+            <div class="banner-content">
+                <h3 class="cate">SHORTEN URLS AND</h3>
+                <h1 class="title">Earn Money</h1>
+                <p>Transforming long, ugly links into Shorten URLs and earn big money. Get paid by every person who
+                    visits your URLs.</p>
+            </div>
+            <div class="banner-form-group">
+                <h3 class="subtitle">Shorten URL Is Just Simple</h3>
+                <form class="banner-form">
+                    <input type="text" placeholder="Your URL here" name="url" required="">
+                    <button type="submit">Shorten <i class="flaticon-startup"></i></button>
+                </form>
+                <div class="banner-counter">
+                    <div class="counter-item">
+                        <h2 class="counter-title"><span class="counter">1,200,000</span>+</h2>
+                        <p>Links clicked per day</p>
+                    </div>
+                    <div class="counter-item">
+                        <h2 class="counter-title"><span class="counter">348,000,000</span>+</h2>
+                        <p>Shortened links in total</p>
+                    </div>
+                    <div class="counter-item">
+                        <h2 class="counter-title"><span class="counter">1,180,000</span>+</h2>
+                        <p>Happy users registered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============= Banner Section Ends Here =============-->
+
+
+    <!--============= Why Section Starts Here =============-->
+    <section class="why-section padding-bottom padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mt-lg-100">
+                    <div class="section-header left-style mb-lg-0 sticky-header mb-low ml-0">
+                        <h2 class="title">
+                            Why Join Us?
+                        </h2>
+                        <p>Cortaly is a completely free tool where you can create short links, which apart from being
+                            free, you get paid! So, now you can make money from home, when managing and protecting your
+                            links.</p>
+                        <a href="https://pixner.net/cortaly/main/index.html#0" class="custom-button active mt-2">Create
+                            Your Account</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="choose-item">
+                        <div class="choose-thumb">
+                            <img src="./assets/01(1).png" alt="why">
+                        </div>
+                        <div class="choose-content">
+                            <h5 class="title">JOIN OUR NETWORK</h5>
+                            <p>Signup for an account in just one minute, shorten URLs and
+                                sharing your links to everywhere. And you'll be paid from any views.</p>
+                        </div>
+                    </div>
+                    <div class="choose-item">
+                        <div class="choose-thumb">
+                            <img src="./assets/02(1).png" alt="why">
+                        </div>
+                        <div class="choose-content">
+                            <h5 class="title">HIGHEST RATES</h5>
+                            <p>Make the most out of your traffic with our always increasing rates. You are required to
+                                earn only $5.00 before you will be paid.</p>
+                        </div>
+                    </div>
+                    <div class="choose-item">
+                        <div class="choose-thumb">
+                            <img src="./assets/03.png" alt="why">
+                        </div>
+                        <div class="choose-content">
+                            <h5 class="title">PAYMENTS ON TIME</h5>
+                            <p>We provide full mobile supports, you can even shorten the URL, control your account and
+                                view the stats on a mobile device.</p>
+                        </div>
+                    </div>
+                    <div class="choose-item">
+                        <div class="choose-thumb">
+                            <img src="./assets/04.png" alt="why">
+                        </div>
+                        <div class="choose-content">
+                            <h5 class="title">RESPONSIVE UI</h5>
+                            <p>Request payments whenever you want and get your payments on 1st day and 15th day of every
+                                month. Enjoy you Spendings!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============= Why Section Ends Here =============-->
+
+
+    <!--============= Feature Section Starts Here =============-->
+    <section class="feature-section padding-top oh padding-bottom pb-lg-half bg_img pos-rel"
+        data-background="./feature-bg.jpg"
+        style="background-image: url(&quot;./feature-bg.jpg&quot;);">
+        <div class="top-shape d-none d-md-block">
+            <img src="./assets/top-shape.png" alt="css">
+        </div>
+        <div class="bottom-shape d-none d-md-block mw-0">
+            <img src="./assets/bottom-shape.png" alt="css">
+        </div>
+        <div class="ball-2" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60" data-paroller-type="foreground"
+            data-paroller-direction="horizontal"
+            style="transform: translate(0px, 0px); transition: transform 0.1s ease 0s; will-change: transform;">
+            <img src="./assets/1.png" alt="balls">
+        </div>
+        <div class="ball-3" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30" data-paroller-type="foreground"
+            data-paroller-direction="horizontal"
+            style="transform: translate(0px, 0px); transition: transform 0.1s ease 0s; will-change: transform;">
+            <img src="./assets/2.png" alt="balls">
+        </div>
+        <div class="ball-4" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30" data-paroller-type="foreground"
+            data-paroller-direction="horizontal"
+            style="transform: translate(0px, 0px); transition: transform 0.1s ease 0s; will-change: transform;">
+            <img src="./assets/3.png" alt="balls">
+        </div>
+        <div class="ball-5" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30" data-paroller-type="foreground"
+            data-paroller-direction="vertical"
+            style="transform: translate(0px, 0px); transition: transform 0.1s ease 0s; will-change: transform;">
+            <img src="./assets/4.png" alt="balls">
+        </div>
+        <div class="ball-6" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60" data-paroller-type="foreground"
+            data-paroller-direction="horizontal"
+            style="transform: translate(0px, 0px); transition: transform 0.1s ease 0s; will-change: transform;">
+            <img src="./assets/5.png" alt="balls">
+        </div>
+        <div class="ball-7" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60" data-paroller-type="foreground"
+            data-paroller-direction="vertical"
+            style="transform: translate(0px, 0px); transition: transform 0.1s ease 0s; will-change: transform;">
+            <img src="./assets/6.png" alt="balls">
+        </div>
+        <div class="container">
+            <div class="section-header cl-white">
+                <!-- <h5 class="cate">Choose a plan that's right for you</h5> -->
+                <h2 class="title mt-md-0">All Features</h2>
+                <p>
+                    Mosto has plans, from free to paid, that scale with your needs. Subscribe to a plan that fits the
+                    size of your business.
+                </p>
+            </div>
+            <div class="tab">
+                <ul class="tab-menu feature-tab">
+                    <li>
+                        <div class="thumb">
+                            <img src="./assets/01(2).png" alt="feature">
+                        </div>
+                        <div class="content">%99 Uptime</div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <img src="./assets/02(2).png" alt="feature">
+                        </div>
+                        <div class="content">Easy Dashboard</div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <img src="./assets/03(1).png" alt="feature">
+                        </div>
+                        <div class="content"> Referral Program</div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <img src="./assets/04(1).png" alt="feature">
+                        </div>
+                        <div class="content">1CLICK Script Installs</div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <img src="./assets/05.png" alt="feature">
+                        </div>
+                        <div class="content">Support</div>
+                    </li>
+                </ul>
+                <div class="tab-area">
+                    <div class="tab-item active">
+                        <div class="feature-item">
+                            <h3 class="title"> %99 Uptime</h3>
+                            <p>We guarantee that our network will be up and functioning 99.9% of the time per
+                                month. We feel a safety net of .1% each month allows us time for repairs and
+                                unforeseen events that may arise. Furthermore, you can view our network status
+                                24 hours a day 365 days a year.</p>
+                        </div>
+                    </div>
+                    <div class="tab-item">
+                        <div class="feature-item">
+                            <h3 class="title">Easy Dashboard</h3>
+                            <p>We guarantee that our network will be up and functioning 99.9% of the time per
+                                month. We feel a safety net of .1% each month allows us time for repairs and
+                                unforeseen events that may arise. Furthermore, you can view our network status
+                                24 hours a day 365 days a year.</p>
+                        </div>
+                    </div>
+                    <div class="tab-item">
+                        <div class="feature-item">
+                            <h3 class="title">Referral Program</h3>
+                            <p>We guarantee that our network will be up and functioning 99.9% of the time per
+                                month. We feel a safety net of .1% each month allows us time for repairs and
+                                unforeseen events that may arise. Furthermore, you can view our network status
+                                24 hours a day 365 days a year.</p>
+                        </div>
+                    </div>
+                    <div class="tab-item">
+                        <div class="feature-item">
+                            <h3 class="title">1CLICK Script Installs</h3>
+                            <p>We guarantee that our network will be up and functioning 99.9% of the time per
+                                month. We feel a safety net of .1% each month allows us time for repairs and
+                                unforeseen events that may arise. Furthermore, you can view our network status
+                                24 hours a day 365 days a year.</p>
+                        </div>
+                    </div>
+                    <div class="tab-item">
+                        <div class="feature-item">
+                            <h3 class="title">Support</h3>
+                            <p>We guarantee that our network will be up and functioning 99.9% of the time per
+                                month. We feel a safety net of .1% each month allows us time for repairs and
+                                unforeseen events that may arise. Furthermore, you can view our network status
+                                24 hours a day 365 days a year.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============= Feature Section Ends Here =============-->
+
+
+    <!--============= How Section Starts Here =============-->
+    <section class="how-section padding-top padding-bottom pt-md-half pb-max-lg-0">
+        <div class="container">
+            <div class="section-header mb-low">
+                <h2 class="title mb-0">How to start</h2>
+            </div>
+            <div class="row justify-content-center mb--40">
+                <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="how-item">
+                        <div class="how-thumb">
+                            <img src="./assets/how1.png" alt="how">
+                        </div>
+                        <div class="how-content">
+                            <h6 class="title">CREATE AN ACCOUNT</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="how-item">
+                        <div class="how-thumb">
+                            <img src="./assets/how2.png" alt="how">
+                        </div>
+                        <div class="how-content">
+                            <h6 class="title">SHORTEN YOUR LINK</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="how-item">
+                        <div class="how-thumb">
+                            <img src="./assets/how3.png" alt="how">
+                        </div>
+                        <div class="how-content">
+                            <h6 class="title">Earn Money</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============= How Section Ends Here =============-->
+
+
+    <!--============= Testimonial Section Starts Here =============-->
+    <section class="testimonial-section padding-top padding-bottom pos-rel oh">
+        <div class="ball-3 style2 d-none d-lg-block" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
+            data-paroller-type="foreground" data-paroller-direction="horizontal"
+            style="transform: translate(0px, 0px); transition: transform 0.1s ease 0s; will-change: transform;">
+            <img src="./assets/circle2.png" alt="client">
+        </div>
+        <div class="ball-6 style2 d-none d-lg-block" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
+            data-paroller-type="foreground" data-paroller-direction="horizontal"
+            style="transform: translate(0px, 0px); transition: transform 0.1s ease 0s; will-change: transform;">
+            <img src="./assets/circle1.png" alt="client">
+        </div>
+        <div class="container">
+            <div class="row justify-content-between flex-wrap-reverse align-items-center">
+                <div class="col-lg-7">
+                    <div class="testimonial-wrapper style-two">
+                        <a href="https://pixner.net/cortaly/main/index.html#0" class="testi-next trigger">
+                            <img src="./assets/left.png" alt="client">
+                        </a>
+                        <a href="https://pixner.net/cortaly/main/index.html#0" class="testi-prev trigger">
+                            <img src="./assets/right.png" alt="client">
+                        </a>
+                        <div class="testimonial-area testimonial-slider owl-carousel owl-theme owl-loaded">
+
+
+                            <div class="owl-stage-outer">
+                                <div class="owl-stage"
+                                    style="transform: translate3d(-1070px, 0px, 0px); transition: all 0.25s ease 0s; width: 3210px;">
+                                    <div class="owl-item cloned" style="width: 535px;">
+                                        <div class="testimonial-item">
+                                            <div class="testimonial-thumb">
+                                                <div class="thumb">
+                                                    <img src="./assets/client1.jpg"
+                                                        alt="client">
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <div class="ratings">
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur scing elit. Aliquam in nulla
+                                                    rhoncus, dapibus orci nec, venenatis eros.
+                                                </p>
+                                                <h5 class="title"><a
+                                                        href="https://pixner.net/cortaly/main/index.html#0">Bela
+                                                        Bose</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item cloned" style="width: 535px;">
+                                        <div class="testimonial-item">
+                                            <div class="testimonial-thumb">
+                                                <div class="thumb">
+                                                    <img src="./assets/client1.jpg"
+                                                        alt="client">
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <div class="ratings">
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur scing elit. Aliquam in nulla
+                                                    rhoncus, dapibus orci nec, venenatis eros.
+                                                </p>
+                                                <h5 class="title"><a
+                                                        href="https://pixner.net/cortaly/main/index.html#0">Raihan
+                                                        Rafuj</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item active" style="width: 535px;">
+                                        <div class="testimonial-item">
+                                            <div class="testimonial-thumb">
+                                                <div class="thumb">
+                                                    <img src="./assets/client1.jpg"
+                                                        alt="client">
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <div class="ratings">
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur scing elit. Aliquam in nulla
+                                                    rhoncus, dapibus orci nec, venenatis eros.
+                                                </p>
+                                                <h5 class="title"><a
+                                                        href="https://pixner.net/cortaly/main/index.html#0">Bela
+                                                        Bose</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item" style="width: 535px;">
+                                        <div class="testimonial-item">
+                                            <div class="testimonial-thumb">
+                                                <div class="thumb">
+                                                    <img src="./assets/client1.jpg"
+                                                        alt="client">
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <div class="ratings">
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur scing elit. Aliquam in nulla
+                                                    rhoncus, dapibus orci nec, venenatis eros.
+                                                </p>
+                                                <h5 class="title"><a
+                                                        href="https://pixner.net/cortaly/main/index.html#0">Raihan
+                                                        Rafuj</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item cloned" style="width: 535px;">
+                                        <div class="testimonial-item">
+                                            <div class="testimonial-thumb">
+                                                <div class="thumb">
+                                                    <img src="./assets/client1.jpg"
+                                                        alt="client">
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <div class="ratings">
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur scing elit. Aliquam in nulla
+                                                    rhoncus, dapibus orci nec, venenatis eros.
+                                                </p>
+                                                <h5 class="title"><a
+                                                        href="https://pixner.net/cortaly/main/index.html#0">Bela
+                                                        Bose</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item cloned" style="width: 535px;">
+                                        <div class="testimonial-item">
+                                            <div class="testimonial-thumb">
+                                                <div class="thumb">
+                                                    <img src="./assets/client1.jpg"
+                                                        alt="client">
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-content">
+                                                <div class="ratings">
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                    <span><i class="fas fa-star"></i></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur scing elit. Aliquam in nulla
+                                                    rhoncus, dapibus orci nec, venenatis eros.
+                                                </p>
+                                                <h5 class="title"><a
+                                                        href="https://pixner.net/cortaly/main/index.html#0">Raihan
+                                                        Rafuj</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-nav disabled">
+                                <div class="owl-prev">prev</div>
+                                <div class="owl-next">next</div>
+                            </div>
+                            <div class="owl-dots disabled"></div>
+                            <div class="owl-thumbs"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 pl-lg-5">
+                    <div class="testi-wrapper">
+                        <div class="testi-header">
+                            <div class="section-header left-style mb-lg-0">
+                                <h5 class="cate">Testimonials</h5>
+                                <h2 class="title">5000+ happy clients all around the world</h2>
+                                <a href="https://pixner.net/cortaly/main/index.html#0"
+                                    class="button-3 active mt-md-2">Leave a review <i class="flaticon-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============= Testimonial Section Ends Here =============-->
+
+
+    <!--============= Call In Action Section Starts Here =============-->
+    <section class="call-in-action padding-top padding-bottom section-bg text-center">
+        <div class="container">
+            <div class="section-header mb-low">
+                <h5 class="cate">JOIN US NOW</h5>
+                <h2 class="title">Boost Your Earnings</h2>
+                <p>Sign up for free and become one of the millions of people around the world
+                    who have fallen in love with Cortaly</p>
+            </div>
+            <a href="https://pixner.net/cortaly/main/index.html#0" class="custom-button">Start earning now!</a>
+        </div>
+    </section>
+    <!--============= Call In Action Section Ends Here =============-->
+
+
+    <!--============= Footer Section Starts Here =============-->
+    <footer class="footer-section padding-top">
+        <div class="footer-bg bg_img" data-background="./footer-bg.jpg"
+            style="background-image: url(&quot;./footer-bg.jpg&quot;);"></div>
+        <div class="footer-bg d-md-block d-none"><img src="./assets/wave.png"
+                alt="footer"></div>
+        <div class="container">
+            <div class="section-header cl-white-499">
+                <h5 class="cate">Contact Us</h5>
+                <h2 class="title">Get in touch!</h2>
+                <p>We thrive to ensure that you get the most out of your experience</p>
+            </div>
+            <form class="contact-form" id="contact_form_submit">
+                <div class="form-group">
+                    <label for="name">Your Full Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="text" name="email" id="email" placeholder="Enter Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Enter Your Message"></textarea>
+                </div>
+                <div class="form-group check-group">
+                    <input type="checkbox" id="check" required="">
+                    <label for="check">I agree to receive emails, newsletters and promotional messages</label>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+            <div class="footer-top">
+                <div class="logo">
+                    <a href="https://pixner.net/cortaly/main/index.html">
+                        <img src="./assets/footer-logo.png" alt="logo">
+                    </a>
+                </div>
+                <ul class="links">
+                    <li>
+                        <a href="https://pixner.net/cortaly/main/index.html#0"><img
+                                src="./assets/neteller.png" alt="footer"></a>
+                    </li>
+                    <li>
+                        <a href="https://pixner.net/cortaly/main/index.html#0"><img
+                                src="./assets/skrill.png" alt="footer"></a>
+                    </li>
+                    <li>
+                        <a href="https://pixner.net/cortaly/main/index.html#0"><img
+                                src="./assets/paypal.png" alt="footer"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-area">
+                    <div class="left cl-white">
+                        <p>© Copyright 2020 | <a href="https://pixner.net/cortaly/main/index.html#0">Cortaly</a> By
+                            UIAXIS</p>
+                    </div>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="https://pixner.net/cortaly/main/index.html#0" class="active">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pixner.net/cortaly/main/index.html#0" class="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pixner.net/cortaly/main/index.html#0" class="">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pixner.net/cortaly/main/index.html#0" class="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--============= Footer Section Ends Here =============-->
+
+
+
+
+    <script src="./assets/jquery-3.3.1.min.js.download"></script>
+    <div id="scrnli_recorder_root"><template shadowrootmode="open">
+            <div>
+                <style></style>
+                <div data-v-acf651b8="" class="app-root"><!----></div>
+                <style>
+                    .app-drawing-canvas[data-v-4a4934a8] {
+                        pointer-events: none;
+                        cursor: default;
+                        position: absolute;
+                        top: 0;
+                        left: 0
+                    }
+
+                    .app-drawing-canvas.active[data-v-4a4934a8] {
+                        pointer-events: all;
+                        cursor: crosshair
+                    }
+
+                    .app-bubble-clicker .bubble[data-v-bbbd8920] {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 99999999;
+                        width: 26px;
+                        height: 26px;
+                        transform: scale(0);
+                        opacity: 0;
+                        background: red;
+                        border-radius: 50%
+                    }
+
+                    .app-bubble-clicker .bubble.show[data-v-bbbd8920] {
+                        animation: 0.6s ease 0s infinite bubble-bbbd8920
+                    }
+
+                    @keyframes bubble-bbbd8920 {
+                        0% {
+                            transform: scale(0);
+                            opacity: 0
+                        }
+
+                        30% {
+                            transform: scale(1);
+                            opacity: 0.6
+                        }
+
+                        60% {
+                            transform: scale(1);
+                            opacity: 0.6
+                        }
+
+                        100% {
+                            transform: scale(0);
+                            opacity: 0
+                        }
+                    }
+
+
+                    .vc-editable-input {
+                        position: relative;
+                    }
+
+                    .vc-input__input {
+                        padding: 0;
+                        border: 0;
+                        outline: none;
+                    }
+
+                    .vc-input__label {
+                        text-transform: capitalize;
+                    }
+
+
+                    .vc-saturation,
+                    .vc-saturation--white,
+                    .vc-saturation--black {
+                        cursor: pointer;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                    }
+
+                    .vc-saturation--white {
+                        background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+                    }
+
+                    .vc-saturation--black {
+                        background: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+                    }
+
+                    .vc-saturation-pointer {
+                        cursor: pointer;
+                        position: absolute;
+                    }
+
+                    .vc-saturation-circle {
+                        cursor: head;
+                        width: 4px;
+                        height: 4px;
+                        box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 1px 2px rgba(0, 0, 0, 0.4);
+                        border-radius: 50%;
+                        transform: translate(-2px, -2px);
+                    }
+
+
+                    .vc-hue {
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        bottom: 0px;
+                        left: 0px;
+                        border-radius: 2px;
+                    }
+
+                    .vc-hue--horizontal {
+                        background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+                    }
+
+                    .vc-hue--vertical {
+                        background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+                    }
+
+                    .vc-hue-container {
+                        cursor: pointer;
+                        margin: 0 2px;
+                        position: relative;
+                        height: 100%;
+                    }
+
+                    .vc-hue-pointer {
+                        z-index: 2;
+                        position: absolute;
+                    }
+
+                    .vc-hue-picker {
+                        cursor: pointer;
+                        margin-top: 1px;
+                        width: 4px;
+                        border-radius: 1px;
+                        height: 8px;
+                        box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+                        background: #fff;
+                        transform: translateX(-2px);
+                    }
+
+                    .vc-checkerboard {
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        bottom: 0px;
+                        left: 0px;
+                        background-size: contain
+                    }
+
+                    .vc-alpha {
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        bottom: 0px;
+                        left: 0px
+                    }
+
+                    .vc-alpha-checkboard-wrap {
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        bottom: 0px;
+                        left: 0px;
+                        overflow: hidden
+                    }
+
+                    .vc-alpha-gradient {
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        bottom: 0px;
+                        left: 0px
+                    }
+
+                    .vc-alpha-container {
+                        cursor: pointer;
+                        position: relative;
+                        z-index: 2;
+                        height: 100%;
+                        margin: 0 3px
+                    }
+
+                    .vc-alpha-pointer {
+                        z-index: 2;
+                        position: absolute
+                    }
+
+                    .vc-alpha-picker {
+                        cursor: pointer;
+                        width: 4px;
+                        border-radius: 1px;
+                        height: 8px;
+                        box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+                        background: #fff;
+                        margin-top: 1px;
+                        transform: translateX(-2px)
+                    }
+
+
+                    .vc-sketch {
+                        position: relative;
+                        width: 200px;
+                        padding: 10px 10px 0;
+                        box-sizing: initial;
+                        background: #fff;
+                        border-radius: 4px;
+                        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.15);
+                    }
+
+                    .vc-sketch-saturation-wrap {
+                        width: 100%;
+                        padding-bottom: 75%;
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    .vc-sketch-controls {
+                        display: flex;
+                    }
+
+                    .vc-sketch-sliders {
+                        padding: 4px 0;
+                        flex: 1;
+                    }
+
+                    .vc-sketch-sliders .vc-hue,
+                    .vc-sketch-sliders .vc-alpha-gradient {
+                        border-radius: 2px;
+                    }
+
+                    .vc-sketch-hue-wrap {
+                        position: relative;
+                        height: 10px;
+                    }
+
+                    .vc-sketch-alpha-wrap {
+                        position: relative;
+                        height: 10px;
+                        margin-top: 4px;
+                        overflow: hidden;
+                    }
+
+                    .vc-sketch-color-wrap {
+                        width: 24px;
+                        height: 24px;
+                        position: relative;
+                        margin-top: 4px;
+                        margin-left: 4px;
+                        border-radius: 3px;
+                    }
+
+                    .vc-sketch-active-color {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        border-radius: 2px;
+                        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15), inset 0 0 4px rgba(0, 0, 0, 0.25);
+                        z-index: 2;
+                    }
+
+                    .vc-sketch-color-wrap .vc-checkerboard {
+                        background-size: auto;
+                    }
+
+                    .vc-sketch-field {
+                        display: flex;
+                        padding-top: 4px;
+                    }
+
+                    .vc-sketch-field .vc-input__input {
+                        width: 90%;
+                        padding: 4px 0 3px 10%;
+                        border: none;
+                        box-shadow: inset 0 0 0 1px #ccc;
+                        font-size: 10px;
+                    }
+
+                    .vc-sketch-field .vc-input__label {
+                        display: block;
+                        text-align: center;
+                        font-size: 11px;
+                        color: #222;
+                        padding-top: 3px;
+                        padding-bottom: 4px;
+                        text-transform: capitalize;
+                    }
+
+                    .vc-sketch-field--single {
+                        flex: 1;
+                        padding-left: 6px;
+                    }
+
+                    .vc-sketch-field--double {
+                        flex: 2;
+                    }
+
+                    .vc-sketch-presets {
+                        margin-right: -10px;
+                        margin-left: -10px;
+                        padding-left: 10px;
+                        padding-top: 10px;
+                        border-top: 1px solid #eee;
+                    }
+
+                    .vc-sketch-presets-color {
+                        border-radius: 3px;
+                        overflow: hidden;
+                        position: relative;
+                        display: inline-block;
+                        margin: 0 10px 10px 0;
+                        vertical-align: top;
+                        cursor: pointer;
+                        width: 16px;
+                        height: 16px;
+                        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+                    }
+
+                    .vc-sketch-presets-color .vc-checkerboard {
+                        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+                        border-radius: 3px;
+                    }
+
+                    .vc-sketch__disable-alpha .vc-sketch-color-wrap {
+                        height: 10px;
+                    }
+
+                    .app-color-picker[data-v-5b5d1e13] {
+                        position: relative;
+                        font-family: 'Didact Gothic', sans-serif
+                    }
+
+                    .app-color-picker.no-transparent[data-v-5b5d1e13] .vc-sketch-color-wrap {
+                        height: 10px
+                    }
+
+                    .app-color-picker.no-transparent[data-v-5b5d1e13] .vc-sketch-alpha-wrap {
+                        display: none
+                    }
+
+                    .app-color-picker.no-transparent[data-v-5b5d1e13] .vc-sketch-field .vc-sketch-field--single:last-child {
+                        display: none
+                    }
+
+                    .app-color-picker .color-wrapper[data-v-5b5d1e13] {
+                        height: 40px;
+                        width: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center
+                    }
+
+                    .app-color-picker .color[data-v-5b5d1e13] {
+                        width: 34px;
+                        height: 34px;
+                        border: 1px solid var(--input-border-color);
+                        border-radius: 4px;
+                        cursor: pointer
+                    }
+
+                    .app-color-picker .drop-down[data-v-5b5d1e13] {
+                        display: none;
+                        position: absolute;
+                        bottom: 50px;
+                        left: 50%;
+                        transform: translate(-50%, 0%);
+                        z-index: 1000
+                    }
+
+                    .app-color-picker.open .drop-down[data-v-5b5d1e13] {
+                        display: block
+                    }
+
+                    /*! nouislider - 14.7.0 - 4/6/2021 */
+                    .noUi-target,
+                    .noUi-target * {
+                        -webkit-touch-callout: none;
+                        -webkit-tap-highlight-color: transparent;
+                        -webkit-user-select: none;
+                        -ms-touch-action: none;
+                        touch-action: none;
+                        -ms-user-select: none;
+                        -moz-user-select: none;
+                        user-select: none;
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box
+                    }
+
+                    .noUi-target {
+                        position: relative
+                    }
+
+                    .noUi-base,
+                    .noUi-connects {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        z-index: 1
+                    }
+
+                    .noUi-connects {
+                        overflow: hidden;
+                        z-index: 0
+                    }
+
+                    .noUi-connect,
+                    .noUi-origin {
+                        will-change: transform;
+                        position: absolute;
+                        z-index: 1;
+                        top: 0;
+                        right: 0;
+                        -ms-transform-origin: 0 0;
+                        -webkit-transform-origin: 0 0;
+                        -webkit-transform-style: preserve-3d;
+                        transform-origin: 0 0;
+                        transform-style: flat
+                    }
+
+                    .noUi-connect {
+                        height: 100%;
+                        width: 100%
+                    }
+
+                    .noUi-origin {
+                        height: 10%;
+                        width: 10%
+                    }
+
+                    .noUi-txt-dir-rtl.noUi-horizontal .noUi-origin {
+                        left: 0;
+                        right: auto
+                    }
+
+                    .noUi-vertical .noUi-origin {
+                        width: 0
+                    }
+
+                    .noUi-horizontal .noUi-origin {
+                        height: 0
+                    }
+
+                    .noUi-handle {
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                        position: absolute
+                    }
+
+                    .noUi-touch-area {
+                        height: 100%;
+                        width: 100%
+                    }
+
+                    .noUi-state-tap .noUi-connect,
+                    .noUi-state-tap .noUi-origin {
+                        -webkit-transition: transform .3s;
+                        transition: transform .3s
+                    }
+
+                    .noUi-state-drag * {
+                        cursor: inherit !important
+                    }
+
+                    .noUi-horizontal {
+                        height: 18px
+                    }
+
+                    .noUi-horizontal .noUi-handle {
+                        width: 34px;
+                        height: 28px;
+                        right: -17px;
+                        top: -6px
+                    }
+
+                    .noUi-vertical {
+                        width: 18px
+                    }
+
+                    .noUi-vertical .noUi-handle {
+                        width: 28px;
+                        height: 34px;
+                        right: -6px;
+                        top: -17px
+                    }
+
+                    .noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
+                        left: -17px;
+                        right: auto
+                    }
+
+                    .noUi-target {
+                        background: #FAFAFA;
+                        border-radius: 4px;
+                        border: 1px solid #D3D3D3;
+                        box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB
+                    }
+
+                    .noUi-connects {
+                        border-radius: 3px
+                    }
+
+                    .noUi-connect {
+                        background: #3FB8AF
+                    }
+
+                    .noUi-draggable {
+                        cursor: ew-resize
+                    }
+
+                    .noUi-vertical .noUi-draggable {
+                        cursor: ns-resize
+                    }
+
+                    .noUi-handle {
+                        border: 1px solid #D9D9D9;
+                        border-radius: 3px;
+                        background: #FFF;
+                        cursor: default;
+                        box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB
+                    }
+
+                    .noUi-active {
+                        box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB
+                    }
+
+                    .noUi-handle:after,
+                    .noUi-handle:before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        height: 14px;
+                        width: 1px;
+                        background: #E8E7E6;
+                        left: 14px;
+                        top: 6px
+                    }
+
+                    .noUi-handle:after {
+                        left: 17px
+                    }
+
+                    .noUi-vertical .noUi-handle:after,
+                    .noUi-vertical .noUi-handle:before {
+                        width: 14px;
+                        height: 1px;
+                        left: 6px;
+                        top: 14px
+                    }
+
+                    .noUi-vertical .noUi-handle:after {
+                        top: 17px
+                    }
+
+                    [disabled] .noUi-connect {
+                        background: #B8B8B8
+                    }
+
+                    [disabled] .noUi-handle,
+                    [disabled].noUi-handle,
+                    [disabled].noUi-target {
+                        cursor: not-allowed
+                    }
+
+                    .noUi-pips,
+                    .noUi-pips * {
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box
+                    }
+
+                    .noUi-pips {
+                        position: absolute;
+                        color: #999
+                    }
+
+                    .noUi-value {
+                        position: absolute;
+                        white-space: nowrap;
+                        text-align: center
+                    }
+
+                    .noUi-value-sub {
+                        color: #ccc;
+                        font-size: 10px
+                    }
+
+                    .noUi-marker {
+                        position: absolute;
+                        background: #CCC
+                    }
+
+                    .noUi-marker-sub {
+                        background: #AAA
+                    }
+
+                    .noUi-marker-large {
+                        background: #AAA
+                    }
+
+                    .noUi-pips-horizontal {
+                        padding: 10px 0;
+                        height: 80px;
+                        top: 100%;
+                        left: 0;
+                        width: 100%
+                    }
+
+                    .noUi-value-horizontal {
+                        -webkit-transform: translate(-50%, 50%);
+                        transform: translate(-50%, 50%)
+                    }
+
+                    .noUi-rtl .noUi-value-horizontal {
+                        -webkit-transform: translate(50%, 50%);
+                        transform: translate(50%, 50%)
+                    }
+
+                    .noUi-marker-horizontal.noUi-marker {
+                        margin-left: -1px;
+                        width: 2px;
+                        height: 5px
+                    }
+
+                    .noUi-marker-horizontal.noUi-marker-sub {
+                        height: 10px
+                    }
+
+                    .noUi-marker-horizontal.noUi-marker-large {
+                        height: 15px
+                    }
+
+                    .noUi-pips-vertical {
+                        padding: 0 10px;
+                        height: 100%;
+                        top: 0;
+                        left: 100%
+                    }
+
+                    .noUi-value-vertical {
+                        -webkit-transform: translate(0, -50%);
+                        transform: translate(0, -50%);
+                        padding-left: 25px
+                    }
+
+                    .noUi-rtl .noUi-value-vertical {
+                        -webkit-transform: translate(0, 50%);
+                        transform: translate(0, 50%)
+                    }
+
+                    .noUi-marker-vertical.noUi-marker {
+                        width: 5px;
+                        height: 2px;
+                        margin-top: -1px
+                    }
+
+                    .noUi-marker-vertical.noUi-marker-sub {
+                        width: 10px
+                    }
+
+                    .noUi-marker-vertical.noUi-marker-large {
+                        width: 15px
+                    }
+
+                    .noUi-tooltip {
+                        display: block;
+                        position: absolute;
+                        border: 1px solid #D9D9D9;
+                        border-radius: 3px;
+                        background: #fff;
+                        color: #000;
+                        padding: 5px;
+                        text-align: center;
+                        white-space: nowrap
+                    }
+
+                    .noUi-horizontal .noUi-tooltip {
+                        -webkit-transform: translate(-50%, 0);
+                        transform: translate(-50%, 0);
+                        left: 50%;
+                        bottom: 120%
+                    }
+
+                    .noUi-vertical .noUi-tooltip {
+                        -webkit-transform: translate(0, -50%);
+                        transform: translate(0, -50%);
+                        top: 50%;
+                        right: 120%
+                    }
+
+                    .noUi-horizontal .noUi-origin>.noUi-tooltip {
+                        -webkit-transform: translate(50%, 0);
+                        transform: translate(50%, 0);
+                        left: auto;
+                        bottom: 10px
+                    }
+
+                    .noUi-vertical .noUi-origin>.noUi-tooltip {
+                        -webkit-transform: translate(0, -18px);
+                        transform: translate(0, -18px);
+                        top: auto;
+                        right: 28px
+                    }
+
+                    .app-vertical-range-slider .slider {
+                        height: 110px;
+                        width: 14px;
+                        border: none;
+                        background: #c3daff;
+                        border-radius: 2px;
+                        box-shadow: none
+                    }
+
+                    .app-vertical-range-slider .slider.noUi-target {
+                        padding: 8px 0
+                    }
+
+                    .app-vertical-range-slider .slider .noUi-connects {
+                        margin: -8px 0;
+                        height: calc(100% + 16px)
+                    }
+
+                    .app-vertical-range-slider .slider .noUi-touch-area {
+                        height: 16px;
+                        width: 16px;
+                        border-radius: 2px
+                    }
+
+                    .app-vertical-range-slider .slider .noUi-handle {
+                        background: #ff9600;
+                        height: 16px;
+                        width: 16px;
+                        border-radius: 2px;
+                        box-shadow: none;
+                        border: none;
+                        right: -1px;
+                        top: 0px;
+                        outline: none
+                    }
+
+                    .app-vertical-range-slider .slider .noUi-handle:before,
+                    .app-vertical-range-slider .slider .noUi-handle:after {
+                        display: none
+                    }
+
+                    .app-vertical-range-slider .slider .noUi-connects .noUi-connect {
+                        background: #c3daff
+                    }
+
+                    .app-vertical-range-slider .slider .noUi-connects .noUi-connect:first-child {
+                        background: #3c84f7
+                    }
+
+                    button.btn[data-v-dd2c3b0c] {
+                        display: inline-block;
+                        font-weight: 300;
+                        line-height: 1.25;
+                        text-align: center;
+                        white-space: nowrap;
+                        vertical-align: middle;
+                        user-select: none;
+                        border: 1px solid transparent;
+                        cursor: pointer;
+                        letter-spacing: 1px;
+                        transition: all 0.15s ease
+                    }
+
+                    button.btn.btn-sm[data-v-dd2c3b0c] {
+                        padding: 0.4rem 0.8rem;
+                        font-size: 0.8rem;
+                        border-radius: 0.2rem
+                    }
+
+                    button.btn.btn-primary[data-v-dd2c3b0c] {
+                        color: #fff;
+                        background-color: #45c8f1;
+                        border-color: #45c8f1
+                    }
+
+                    button.btn.btn-outline-primary[data-v-dd2c3b0c] {
+                        color: #45c8f1;
+                        background-color: transparent;
+                        border-color: #45c8f1
+                    }
+
+                    button.btn.btn-danger[data-v-dd2c3b0c] {
+                        color: #fff;
+                        background-color: #ff4949;
+                        border-color: #ff4949
+                    }
+
+                    .text-muted[data-v-dd2c3b0c] {
+                        color: #8492a6
+                    }
+
+                    .text-center[data-v-dd2c3b0c] {
+                        text-align: center
+                    }
+
+                    .drop-down-enter[data-v-dd2c3b0c],
+                    .drop-down-leave-to[data-v-dd2c3b0c] {
+                        transform: translateX(0) translateY(-20px);
+                        transition-timing-function: cubic-bezier(0.74, 0.04, 0.26, 1.05);
+                        opacity: 0
+                    }
+
+                    .drop-down-enter-active[data-v-dd2c3b0c],
+                    .drop-down-leave-active[data-v-dd2c3b0c] {
+                        transition: all 0.15s
+                    }
+
+                    .move-left-enter[data-v-dd2c3b0c],
+                    .move-left-leave-to[data-v-dd2c3b0c] {
+                        transform: translateY(0) translateX(-80px);
+                        transition-timing-function: cubic-bezier(0.74, 0.04, 0.26, 1.05);
+                        opacity: 0
+                    }
+
+                    .move-left-enter-active[data-v-dd2c3b0c],
+                    .move-left-leave-active[data-v-dd2c3b0c] {
+                        transition: all 0.15s
+                    }
+
+                    .no-tr[data-v-dd2c3b0c] {
+                        transition: none !important
+                    }
+
+                    .no-tr *[data-v-dd2c3b0c] {
+                        transition: none !important
+                    }
+
+                    .overlay[data-v-dd2c3b0c] {
+                        position: fixed;
+                        background: rgba(220, 220, 220, 0.8);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        transition: all 0.2s ease;
+                        opacity: 0;
+                        visibility: hidden
+                    }
+
+                    .overlay .modal[data-v-dd2c3b0c] {
+                        transition: all 0.2s ease;
+                        opacity: 0;
+                        transform: scale(0.6);
+                        overflow: hidden
+                    }
+
+                    .overlay.show[data-v-dd2c3b0c] {
+                        opacity: 1;
+                        visibility: visible
+                    }
+
+                    .overlay.show .modal[data-v-dd2c3b0c] {
+                        opacity: 1;
+                        transform: scale(1)
+                    }
+
+                    .panel[data-v-dd2c3b0c] {
+                        padding: 6px 10px;
+                        display: flex;
+                        width: 100%;
+                        box-sizing: border-box;
+                        align-items: center;
+                        border-radius: 6px;
+                        position: relative;
+                        border: 1px solid #eaf7ff;
+                        background: #f7fcff;
+                        outline: none;
+                        transition: all 0.07s ease-in-out
+                    }
+
+                    .btn[data-v-dd2c3b0c] {
+                        cursor: pointer;
+                        box-sizing: border-box
+                    }
+
+                    .light-btn[data-v-dd2c3b0c] {
+                        padding: 10px 12px;
+                        display: flex;
+                        width: 100%;
+                        box-sizing: border-box;
+                        align-items: center;
+                        border-radius: 6px;
+                        position: relative;
+                        border: 1px solid #eaf7ff;
+                        background: #f7fcff;
+                        outline: none;
+                        cursor: pointer;
+                        transition: all 0.07s ease-in-out
+                    }
+
+                    .light-btn[data-v-dd2c3b0c]:hover {
+                        background: #e0f4ff;
+                        border-color: #8acfff
+                    }
+
+                    .primary-btn[data-v-dd2c3b0c] {
+                        background: #239bf5;
+                        color: white;
+                        border-radius: 6px;
+                        height: 46px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: 0.2s ease;
+                        font-size: 14px;
+                        font-family: "Didact Gothic Regular", sans-serif
+                    }
+
+                    .primary-btn[data-v-dd2c3b0c]:hover {
+                        background: #40a8f6;
+                        color: white;
+                        text-decoration: none
+                    }
+
+                    .shake[data-v-dd2c3b0c] {
+                        animation: shake-dd2c3b0c 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+                        transform: translate3d(0, 0, 0)
+                    }
+
+                    @keyframes shake-dd2c3b0c {
+
+                        10%,
+                        90% {
+                            transform: translate3d(-1px, 0, 0)
+                        }
+
+                        20%,
+                        80% {
+                            transform: translate3d(2px, 0, 0)
+                        }
+
+                        30%,
+                        50%,
+                        70% {
+                            transform: translate3d(-4px, 0, 0)
+                        }
+
+                        40%,
+                        60% {
+                            transform: translate3d(4px, 0, 0)
+                        }
+                    }
+
+                    .pulse[data-v-dd2c3b0c] {
+                        animation: pulse-dd2c3b0c 2s ease infinite
+                    }
+
+                    @keyframes pulse-dd2c3b0c {
+                        0% {
+                            opacity: 0.7
+                        }
+
+                        50% {
+                            opacity: 0.4
+                        }
+
+                        100% {
+                            opacity: 0.7
+                        }
+                    }
+
+                    .flash-once[data-v-dd2c3b0c] {
+                        animation: flash-once 3.5s ease 1
+                    }
+
+                    @keyframes fade-up-dd2c3b0c {
+                        0% {
+                            transform: translate3d(0, 10px, 0);
+                            opacity: 0
+                        }
+
+                        100% {
+                            transform: translate3d(0, 0, 0);
+                            opacity: 1
+                        }
+                    }
+
+                    .fade-in[data-v-dd2c3b0c] {
+                        animation: fade-in-dd2c3b0c 0.3s ease-in-out
+                    }
+
+                    @keyframes fade-in-dd2c3b0c {
+                        0% {
+                            opacity: 0
+                        }
+
+                        100% {
+                            opacity: 1
+                        }
+                    }
+
+                    .spin[data-v-dd2c3b0c] {
+                        animation-name: spin-dd2c3b0c;
+                        animation-duration: 2000ms;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: linear
+                    }
+
+                    @keyframes spin-dd2c3b0c {
+                        from {
+                            transform: rotate(0deg)
+                        }
+
+                        to {
+                            transform: rotate(360deg)
+                        }
+                    }
+
+                    .bounceIn[data-v-dd2c3b0c] {
+                        animation-name: bounceIn-dd2c3b0c;
+                        transform-origin: center bottom;
+                        animation-duration: 1s;
+                        animation-fill-mode: both;
+                        animation-iteration-count: 1
+                    }
+
+                    @keyframes bounceIn-dd2c3b0c {
+
+                        0%,
+                        20%,
+                        40%,
+                        60%,
+                        80%,
+                        100% {
+                            -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+                        }
+
+                        0% {
+                            opacity: 1;
+                            -webkit-transform: scale3d(0.8, 0.8, 0.8);
+                            transform: scale3d(0.8, 0.8, 0.8)
+                        }
+
+                        20% {
+                            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                            transform: scale3d(1.1, 1.1, 1.1)
+                        }
+
+                        40% {
+                            -webkit-transform: scale3d(0.9, 0.9, 0.9);
+                            transform: scale3d(0.9, 0.9, 0.9)
+                        }
+
+                        60% {
+                            opacity: 1;
+                            -webkit-transform: scale3d(1.03, 1.03, 1.03);
+                            transform: scale3d(1.03, 1.03, 1.03)
+                        }
+
+                        80% {
+                            -webkit-transform: scale3d(0.97, 0.97, 0.97);
+                            transform: scale3d(0.97, 0.97, 0.97)
+                        }
+
+                        100% {
+                            opacity: 1;
+                            -webkit-transform: scale3d(1, 1, 1);
+                            transform: scale3d(1, 1, 1)
+                        }
+                    }
+
+                    @keyframes dots-dd2c3b0c {
+
+                        0%,
+                        20% {
+                            color: rgba(0, 0, 0, 0);
+                            text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0)
+                        }
+
+                        40% {
+                            color: #8492a6;
+                            text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0)
+                        }
+
+                        60% {
+                            text-shadow: 0.25em 0 0 #8492a6, 0.5em 0 0 rgba(0, 0, 0, 0)
+                        }
+
+                        80%,
+                        100% {
+                            text-shadow: 0.25em 0 0 #8492a6, 0.5em 0 0 #8492a6
+                        }
+                    }
+
+                    @keyframes recording-dd2c3b0c {
+                        0% {
+                            box-shadow: 0px 0px 5px 0px rgba(173, 0, 0, 0.3)
+                        }
+
+                        65% {
+                            box-shadow: 0px 0px 5px 5px rgba(173, 0, 0, 0.3)
+                        }
+
+                        90% {
+                            box-shadow: 0px 0px 5px 5px rgba(173, 0, 0, 0)
+                        }
+                    }
+
+
+
+                    body[data-v-dd2c3b0c] {
+                        margin: 0;
+                        font-size: 100%;
+                        color: #3c4858
+                    }
+
+                    a[data-v-dd2c3b0c] {
+                        text-decoration: none;
+                        color: #45c8f1
+                    }
+
+                    h1[data-v-dd2c3b0c],
+                    h2[data-v-dd2c3b0c],
+                    h3[data-v-dd2c3b0c],
+                    h4[data-v-dd2c3b0c] {
+                        margin-top: 0
+                    }
+
+                    svg[data-v-dd2c3b0c] {
+                        outline: none
+                    }
+
+                    .app-main[data-v-dd2c3b0c] {
+                        position: fixed;
+                        z-index: 2147483647;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100vh;
+                        pointer-events: none
+                    }
+
+                    .app-main .container[data-v-dd2c3b0c] {
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        position: relative;
+                        pointer-events: none
+                    }
+
+                    .app-main .container canvas[data-v-dd2c3b0c] {
+                        width: 100%;
+                        height: 100%
+                    }
+
+                    .app-main .container .controls[data-v-dd2c3b0c] {
+                        position: fixed;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 2147483647;
+                        padding: 30px 30px;
+                        box-sizing: border-box;
+                        display: flex;
+                        pointer-events: none
+                    }
+
+                    .app-main .container .controls .btn[data-v-dd2c3b0c] {
+                        background: #f8fcff;
+                        border: 1px solid #cde5f6;
+                        pointer-events: all;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 6px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: 0.2s ease
+                    }
+
+                    .app-main .container .controls .play-btn[data-v-dd2c3b0c] {
+                        background: #3c84f7;
+                        margin-right: 20px;
+                        border: none
+                    }
+
+                    .app-main .container .controls .play-btn[data-v-dd2c3b0c]:hover {
+                        background: #5997f8
+                    }
+
+                    .app-main .container .controls .play-btn svg[data-v-dd2c3b0c] {
+                        width: 14px;
+                        height: auto
+                    }
+
+                    .app-main .container .controls .play-btn svg path[data-v-dd2c3b0c] {
+                        fill: white
+                    }
+
+                    .app-main .container .controls .items[data-v-dd2c3b0c] {
+                        display: flex
+                    }
+
+                    .app-main .container .controls .control-item[data-v-dd2c3b0c] {
+                        box-sizing: border-box;
+                        margin-right: 10px;
+                        transition: 0.2s ease;
+                        position: relative;
+                        border-radius: 6px
+                    }
+
+                    .app-main .container .controls .control-item .btn svg[data-v-dd2c3b0c] {
+                        width: 16px;
+                        height: auto
+                    }
+
+                    .app-main .container .controls .control-item .btn svg path[data-v-dd2c3b0c] {
+                        fill: #1aa1fa;
+                        transition: 0.2s ease
+                    }
+
+                    .app-main .container .controls .control-item.close-record .btn svg path[data-v-dd2c3b0c] {
+                        fill: #fd2d5e
+                    }
+
+                    .app-main .container .controls .control-item .input-wrap[data-v-dd2c3b0c] {
+                        position: absolute;
+                        top: -135px;
+                        left: 0;
+                        width: 100%;
+                        height: 135px;
+                        align-items: center;
+                        display: flex;
+                        justify-content: center
+                    }
+
+                    .app-main .container .controls .control-item .app-vertical-range-slider[data-v-dd2c3b0c] {
+                        pointer-events: none;
+                        opacity: 0;
+                        transition: 0.2s ease
+                    }
+
+                    .app-main .container .controls .control-item:hover .btn[data-v-dd2c3b0c] {
+                        background: #d9efff
+                    }
+
+                    .app-main .container .controls .control-item.active .btn[data-v-dd2c3b0c] {
+                        background: #3c84f7;
+                        border-color: #3c84f7
+                    }
+
+                    .app-main .container .controls .control-item.active .btn svg path[data-v-dd2c3b0c] {
+                        fill: white
+                    }
+
+                    .app-main .container .controls .control-item.active:hover .input-wrap[data-v-dd2c3b0c] {
+                        pointer-events: all
+                    }
+
+                    .app-main .container .controls .control-item.active:hover .app-vertical-range-slider[data-v-dd2c3b0c] {
+                        pointer-events: all;
+                        opacity: 1
+                    }
+
+                    button.btn[data-v-acf651b8] {
+                        display: inline-block;
+                        font-weight: 300;
+                        line-height: 1.25;
+                        text-align: center;
+                        white-space: nowrap;
+                        vertical-align: middle;
+                        user-select: none;
+                        border: 1px solid transparent;
+                        cursor: pointer;
+                        letter-spacing: 1px;
+                        transition: all 0.15s ease
+                    }
+
+                    button.btn.btn-sm[data-v-acf651b8] {
+                        padding: 0.4rem 0.8rem;
+                        font-size: 0.8rem;
+                        border-radius: 0.2rem
+                    }
+
+                    button.btn.btn-primary[data-v-acf651b8] {
+                        color: #fff;
+                        background-color: #45c8f1;
+                        border-color: #45c8f1
+                    }
+
+                    button.btn.btn-outline-primary[data-v-acf651b8] {
+                        color: #45c8f1;
+                        background-color: transparent;
+                        border-color: #45c8f1
+                    }
+
+                    button.btn.btn-danger[data-v-acf651b8] {
+                        color: #fff;
+                        background-color: #ff4949;
+                        border-color: #ff4949
+                    }
+
+                    .text-muted[data-v-acf651b8] {
+                        color: #8492a6
+                    }
+
+                    .text-center[data-v-acf651b8] {
+                        text-align: center
+                    }
+
+                    .drop-down-enter[data-v-acf651b8],
+                    .drop-down-leave-to[data-v-acf651b8] {
+                        transform: translateX(0) translateY(-20px);
+                        transition-timing-function: cubic-bezier(0.74, 0.04, 0.26, 1.05);
+                        opacity: 0
+                    }
+
+                    .drop-down-enter-active[data-v-acf651b8],
+                    .drop-down-leave-active[data-v-acf651b8] {
+                        transition: all 0.15s
+                    }
+
+                    .move-left-enter[data-v-acf651b8],
+                    .move-left-leave-to[data-v-acf651b8] {
+                        transform: translateY(0) translateX(-80px);
+                        transition-timing-function: cubic-bezier(0.74, 0.04, 0.26, 1.05);
+                        opacity: 0
+                    }
+
+                    .move-left-enter-active[data-v-acf651b8],
+                    .move-left-leave-active[data-v-acf651b8] {
+                        transition: all 0.15s
+                    }
+
+                    .no-tr[data-v-acf651b8] {
+                        transition: none !important
+                    }
+
+                    .no-tr *[data-v-acf651b8] {
+                        transition: none !important
+                    }
+
+                    .overlay[data-v-acf651b8] {
+                        position: fixed;
+                        background: rgba(220, 220, 220, 0.8);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        transition: all 0.2s ease;
+                        opacity: 0;
+                        visibility: hidden
+                    }
+
+                    .overlay .modal[data-v-acf651b8] {
+                        transition: all 0.2s ease;
+                        opacity: 0;
+                        transform: scale(0.6);
+                        overflow: hidden
+                    }
+
+                    .overlay.show[data-v-acf651b8] {
+                        opacity: 1;
+                        visibility: visible
+                    }
+
+                    .overlay.show .modal[data-v-acf651b8] {
+                        opacity: 1;
+                        transform: scale(1)
+                    }
+
+                    .panel[data-v-acf651b8] {
+                        padding: 6px 10px;
+                        display: flex;
+                        width: 100%;
+                        box-sizing: border-box;
+                        align-items: center;
+                        border-radius: 6px;
+                        position: relative;
+                        border: 1px solid #eaf7ff;
+                        background: #f7fcff;
+                        outline: none;
+                        transition: all 0.07s ease-in-out
+                    }
+
+                    .btn[data-v-acf651b8] {
+                        cursor: pointer;
+                        box-sizing: border-box
+                    }
+
+                    .light-btn[data-v-acf651b8] {
+                        padding: 10px 12px;
+                        display: flex;
+                        width: 100%;
+                        box-sizing: border-box;
+                        align-items: center;
+                        border-radius: 6px;
+                        position: relative;
+                        border: 1px solid #eaf7ff;
+                        background: #f7fcff;
+                        outline: none;
+                        cursor: pointer;
+                        transition: all 0.07s ease-in-out
+                    }
+
+                    .light-btn[data-v-acf651b8]:hover {
+                        background: #e0f4ff;
+                        border-color: #8acfff
+                    }
+
+                    .primary-btn[data-v-acf651b8] {
+                        background: #239bf5;
+                        color: white;
+                        border-radius: 6px;
+                        height: 46px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: 0.2s ease;
+                        font-size: 14px;
+                        font-family: "Didact Gothic Regular", sans-serif
+                    }
+
+                    .primary-btn[data-v-acf651b8]:hover {
+                        background: #40a8f6;
+                        color: white;
+                        text-decoration: none
+                    }
+
+                    .shake[data-v-acf651b8] {
+                        animation: shake-acf651b8 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+                        transform: translate3d(0, 0, 0)
+                    }
+
+                    @keyframes shake-acf651b8 {
+
+                        10%,
+                        90% {
+                            transform: translate3d(-1px, 0, 0)
+                        }
+
+                        20%,
+                        80% {
+                            transform: translate3d(2px, 0, 0)
+                        }
+
+                        30%,
+                        50%,
+                        70% {
+                            transform: translate3d(-4px, 0, 0)
+                        }
+
+                        40%,
+                        60% {
+                            transform: translate3d(4px, 0, 0)
+                        }
+                    }
+
+                    .pulse[data-v-acf651b8] {
+                        animation: pulse-acf651b8 2s ease infinite
+                    }
+
+                    @keyframes pulse-acf651b8 {
+                        0% {
+                            opacity: 0.7
+                        }
+
+                        50% {
+                            opacity: 0.4
+                        }
+
+                        100% {
+                            opacity: 0.7
+                        }
+                    }
+
+                    .flash-once[data-v-acf651b8] {
+                        animation: flash-once 3.5s ease 1
+                    }
+
+                    @keyframes fade-up-acf651b8 {
+                        0% {
+                            transform: translate3d(0, 10px, 0);
+                            opacity: 0
+                        }
+
+                        100% {
+                            transform: translate3d(0, 0, 0);
+                            opacity: 1
+                        }
+                    }
+
+                    .fade-in[data-v-acf651b8] {
+                        animation: fade-in-acf651b8 0.3s ease-in-out
+                    }
+
+                    @keyframes fade-in-acf651b8 {
+                        0% {
+                            opacity: 0
+                        }
+
+                        100% {
+                            opacity: 1
+                        }
+                    }
+
+                    .spin[data-v-acf651b8] {
+                        animation-name: spin-acf651b8;
+                        animation-duration: 2000ms;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: linear
+                    }
+
+                    @keyframes spin-acf651b8 {
+                        from {
+                            transform: rotate(0deg)
+                        }
+
+                        to {
+                            transform: rotate(360deg)
+                        }
+                    }
+
+                    .bounceIn[data-v-acf651b8] {
+                        animation-name: bounceIn-acf651b8;
+                        transform-origin: center bottom;
+                        animation-duration: 1s;
+                        animation-fill-mode: both;
+                        animation-iteration-count: 1
+                    }
+
+                    @keyframes bounceIn-acf651b8 {
+
+                        0%,
+                        20%,
+                        40%,
+                        60%,
+                        80%,
+                        100% {
+                            -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+                        }
+
+                        0% {
+                            opacity: 1;
+                            -webkit-transform: scale3d(0.8, 0.8, 0.8);
+                            transform: scale3d(0.8, 0.8, 0.8)
+                        }
+
+                        20% {
+                            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                            transform: scale3d(1.1, 1.1, 1.1)
+                        }
+
+                        40% {
+                            -webkit-transform: scale3d(0.9, 0.9, 0.9);
+                            transform: scale3d(0.9, 0.9, 0.9)
+                        }
+
+                        60% {
+                            opacity: 1;
+                            -webkit-transform: scale3d(1.03, 1.03, 1.03);
+                            transform: scale3d(1.03, 1.03, 1.03)
+                        }
+
+                        80% {
+                            -webkit-transform: scale3d(0.97, 0.97, 0.97);
+                            transform: scale3d(0.97, 0.97, 0.97)
+                        }
+
+                        100% {
+                            opacity: 1;
+                            -webkit-transform: scale3d(1, 1, 1);
+                            transform: scale3d(1, 1, 1)
+                        }
+                    }
+
+                    @keyframes dots-acf651b8 {
+
+                        0%,
+                        20% {
+                            color: rgba(0, 0, 0, 0);
+                            text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0)
+                        }
+
+                        40% {
+                            color: #8492a6;
+                            text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0)
+                        }
+
+                        60% {
+                            text-shadow: 0.25em 0 0 #8492a6, 0.5em 0 0 rgba(0, 0, 0, 0)
+                        }
+
+                        80%,
+                        100% {
+                            text-shadow: 0.25em 0 0 #8492a6, 0.5em 0 0 #8492a6
+                        }
+                    }
+
+                    @keyframes recording-acf651b8 {
+                        0% {
+                            box-shadow: 0px 0px 5px 0px rgba(173, 0, 0, 0.3)
+                        }
+
+                        65% {
+                            box-shadow: 0px 0px 5px 5px rgba(173, 0, 0, 0.3)
+                        }
+
+                        90% {
+                            box-shadow: 0px 0px 5px 5px rgba(173, 0, 0, 0)
+                        }
+                    }
+
+
+
+                    body[data-v-acf651b8] {
+                        margin: 0;
+                        font-size: 100%;
+                        color: #3c4858
+                    }
+
+                    a[data-v-acf651b8] {
+                        text-decoration: none;
+                        color: #45c8f1
+                    }
+
+                    h1[data-v-acf651b8],
+                    h2[data-v-acf651b8],
+                    h3[data-v-acf651b8],
+                    h4[data-v-acf651b8] {
+                        margin-top: 0
+                    }
+
+                    svg[data-v-acf651b8] {
+                        outline: none
+                    }
+
+                    .app-root[data-v-acf651b8] {
+                        line-height: normal
+                    }
+                </style>
+            </div>
+        </template></div>
+    <script src="./assets/modernizr-3.6.0.min.js.download"></script>
+    <script src="./assets/plugins.js.download"></script>
+    <script src="./assets/bootstrap.min.js.download"></script>
+    <script src="./assets/wow.min.js.download"></script>
+    <script src="./assets/waypoints.js.download"></script>
+    <script src="./assets/nice-select.js.download"></script>
+    <script src="./assets/counterup.min.js.download"></script>
+    <script src="./assets/owl.min.js.download"></script>
+    <script src="./assets/magnific-popup.min.js.download"></script>
+    <script src="./assets/paroller.js.download"></script>
+    <script src="./assets/contact.js.download"></script>
+    <script src="./assets/main.js.download"></script>
+
+
+    <iframe src="./assets/audio-devices.html" allow="microphone"
+        style="display: none;"></iframe><input type="file" id="" name="file" style="display: none;">
+    <div data-v-f3fb3dc8="">
+        <div data-v-f3fb3dc8="" class="container_selected_area" style="cursor: crosshair;"></div>
+        <div data-v-f3fb3dc8="" class="area" style="left: 0px; top: 0px; width: 0px; height: 0px;"></div>
+    </div>
+    <div hidden="" class="ubey-RecordingScreen-count-down ubey-RecordingScreen-count-down-container">
+        <style>
+            .ubey-RecordingScreen-count-down-container {
+                position: fixed;
+                height: 100vh;
+                width: 100vw;
+                top: 0;
+                left: 0;
+                z-index: 9999999999999;
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+
+            .ubey-RecordingScreen-count-down-content {
+                position: absolute;
+                display: flex;
+                top: 50%;
+                left: 50%;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                height: 15em;
+                width: 15em;
+                transform: translate(-50%, -100%);
+                background-color: rgba(0, 0, 0, 0.6);
+                border-radius: 50%;
+            }
+
+            #ubey-RecordingScreen-count-count {
+                font-size: 14em;
+                transform: translateY(-2%);
+            }
+        </style>
+        <div class="ubey-RecordingScreen-count-down-content">
+            <span id="ubey-RecordingScreen-count-count"></span>
+        </div>
+    </div>
+</body>
+
+</html>
